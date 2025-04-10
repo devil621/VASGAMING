@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VAS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      background: url('https://www.icegif.com/wp-content/uploads/2023/03/icegif-777.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background: rgba(128, 128, 128, 0.6);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: rgba(128, 128, 128, 0.6);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(230, 240, 255, 0.2); /* transparent background */
+      backdrop-filter: blur(4px);
+      border-radius: 12px;
+      margin: 20px;
+    }
+    .hero h1 {
+      margin-bottom: 10px;
+      font-size: 36px;
+      color: #fff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+      50% { opacity: 0.8; text-shadow: 0 0 8px #0ff, 0 0 15px #0ff; }
+      100% { opacity: 1; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+    }
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .retro-game {
+      background: #111;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #0f0;
+    }
+    .retro-game h3 {
+      font-size: 24px;
+      text-shadow: 0 0 5px #0f0;
+    }
+    .game-thumb {
+      position: relative;
+      display: block;
+    }
+    .game-thumb img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #0f0;
+      box-shadow: 0 0 10px #0f0;
+      transition: transform 0.2s;
+    }
+    .gif-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+    .game-thumb:hover .static-img {
+      display: none;
+    }
+    .game-thumb:hover .gif-img {
+      display: block;
+    }
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    .logo-glow {
+      height: 80px;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 5px #fff); }
+      100% { filter: drop-shadow(0 0 15px #0ff); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="vas.png" alt="VSJ GAMES Logo" class="logo-glow" style="height: 200px;" />
+    <p>Free online games for everyone</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Games</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Submit Game</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to VAS gaming</h1>
+    <p>Play the best online games for free—no downloads, no limits.</p>
+  </div>
+
+  <section class="games">
+    <!-- Tic Tac Toe -->
+    <div class="game-card retro-game">
+      <h3>❌⭕ Tic Tac Toe</h3>
+      <a href="https://playtictactoe.org/#google_vignette" class="game-thumb">
+        <img class="static-img" src="tictactoe.png" alt="Tic Tac Toe" />
+        <img class="gif-img" src="classic_tictactoe.gif" alt="Tic Tac Toe GIF" />
+      </a>
+    </div>
+
+    <!-- Tetris -->
+    <div class="game-card retro-game">
+      <h3>🧱 Tetris</h3>
+      <a href="https://tetris.com/play-tetris" class="game-thumb">
+        <img class="static-img" src="tetris.png" alt="Tetris" />
+        <img class="gif-img" src="tetris2.gif" alt="Tetris GIF" />
+      </a>
+    </div>
+
+    <!-- Snake -->
+    <div class="game-card retro-game">
+      <h3>🐍 Retro Snake</h3>
+      <a href="https://playsnake.org/#google_vignette" class="game-thumb">
+        <img class="static-img" src="snake.png" alt="Snake" />
+        <img class="gif-img" src="snake2.gif" alt="Snake GIF" />
+      </a>
+    </div>
+  </section>
+
+  <section class="developers" style="padding: 40px; background: rgba(0, 0, 0, 0.7); color: #0f0; text-align: center; font-family: 'Courier New', monospace;">
+    <h2 style="font-size: 28px; margin-bottom: 20px; text-shadow: 0 0 8px #0f0;">👾 Meet the Developers</h2>
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      <div style="background: #111; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #0f0; min-width: 200px; text-align: center;">
+        <h3 style="text-shadow: 0 0 5px #0f0;">Vivek Singh Jadoun(BCAN1CA23140)</h3>
+        <img src="vivek.png" alt="Vivek Singh Jadoun" style="width: 200px; height: 300px; box-shadow: 0 0 10px #0f0; margin-top: 10px;">
+      </div>
+      <div style="background: #111; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #0f0; min-width: 200px; text-align: center;">
+        <h3 style="text-shadow: 0 0 5px #0f0;">Samarth Dantre(BCAN1CA23112)</h3>
+        <img src="samarth.jpg" alt="Samarth Dantre" style="width: 200px; height: 300px; box-shadow: 0 0 10px #0f0; margin-top: 10px;">
+      </div>
+      <div style="background: #111; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #0f0; min-width: 200px; text-align: center;">
+        <h3 style="text-shadow: 0 0 5px #0f0;">Aman Singh Chauhan (BCAN1CA23119)
+        </h3>
+        <img src="aman.jpg" alt="Aman Singh Chauhan" style="width: 200px; height: 300px; box-shadow: 0 0 10px #0f0; margin-top: 10px;">
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+
+  <script>
+    function startTicTacToe() {
+      document.getElementById("ticTacToeGame").style.display = "block";
+    }
+
+    function startTetris() {
+      document.getElementById("tetrisGame").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
